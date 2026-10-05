@@ -12,11 +12,11 @@
 - Gerçek paket yükleme/kaldırma/güncelleme/listeleme işlemleri için `tpg` komutları.
 - Yerel dil motorunun sınıflar, fonksiyonlar, decorator, generator, async, comprehension, type annotation, exception ve pattern matching gibi özelliklerine erişim.
 - UTF-8 kaynak, Türkçe karakterli identifier'lar ve kaynak dosyası satır konumlu Türkçe hata raporları.
-- Ek Python paketi gerektirmez; çalıştırmak için Python 3.10+ gerekir. Paket kurma komutları internet bağlantısı kullanır.
+- Harici çalışma zamanı bağımlılığı yoktur; paket kurulumu için internet bağlantısı gerekir.
 
 ## Gereksinimler ve kurulum
 
-Goktug+ 1.0.3, **3.10 veya üzeri** bir Python çalışma zamanı ister. Kaynak deposunda:
+Goktug+ 1.0.0, **3.10 veya üzeri** bir Python çalışma zamanı ister. Kaynak deposunda:
 
 ```bash
 python3 -m venv .venv
@@ -31,14 +31,6 @@ Geliştirme testleri için:
 ```bash
 python -m unittest discover -s tests -v
 ```
-
-### Windows Setup Wizard
-
-`installer/GoktugPlusSetup.exe` Windows için kullanıcı profiline kurulum sihirbazıdır. Önceki kurulum `Program Files` altındaysa Setup yeni sürümü otomatik olarak kullanıcı klasörüne yönlendirir ve eski PATH girdisini kaldırır; yönetici izni istemez. Kurucu önce mevcut Python 3.10+ ortamını kullanmaya çalışır. Uyumlu ortam bulunmazsa Python 3.14.8'in resmî Windows kurucusunu indirir, SHA-256 ve dijital imzasını doğrular ve çalışma ortamını yalnızca Goktug+ klasörüne kurar; diğer Python kurulumlarına, başlatıcıya veya Python'un PATH ayarlarına dokunmaz. `trp`/`tpg` komutları için Goktug+ klasörü kullanıcı PATH'ine eklenir. İlk indirme için internet bağlantısı gerekir. Kurucu ayrıca `.tpg` dosyalarının açıklamasını **Goktug+ Kaynak Dosyası** olarak kaydeder ve özel kırmızı X simgesi atar. Kurulumdan sonra `.tpg` dosyasına çift tıklamak, o dosyanın klasöründe CMD açıp `trp dosya.tpg` komutunu çalıştırır; konsol sonuçları görebilmeniz için açık kalır. Türkçe çalışma hataları kaynak dosyasının satırını gösterir; kullanıcı kesintisi İngilizce traceback olmadan bildirilir. Kaldırıcı uygulamanın bilinen dosyalarını siler; kurulum klasörüne eklediğiniz diğer dosyaları, özel Python ortamına sonradan eklediğiniz paketleri ve değiştirdiğiniz runtime dosyalarını korur. Önceki `.tpg` ilişkilendirmesini de geri yükler; korunmuş dosyalar varsa kurulum klasörü kalabilir.
-
-Setup dosyasının özelliklerinde ve Windows yüklü uygulamalar listesinde yayımlayıcı bilgisi **Goktug Software** olarak görünür. Bu, kod imzası değildir: EXE dijital olarak imzalanmadığından Windows SmartScreen yine uyarı gösterebilir. Microsoft'a göre doğrulanmış yayımlayıcı için sertifika gerekir; yeni imzalı dosyalarda da SmartScreen itibarı oluşana kadar uyarı görülebilir. Kurulum kaydı **Ayarlar → Uygulamalar → Yüklü uygulamalar** bölümündedir.
-
-Kurulum sihirbazının NSIS kaynakları `installer/` altındadır. NSIS kurulu bir geliştirici makinesinde Windows: `installer\build_windows_setup.bat`; Linux: `./installer/build_windows_setup.sh` komutlarıyla yeniden derlenebilir.
 
 ## İlk program
 
@@ -61,7 +53,7 @@ Beklenen çıktı:
 Merhaba Dünya
 ```
 
-Örneklerin tümü `examples/` dizinindedir. Örneğin hesap makinesini `trp examples/hesap_makinesi.tpg`, factorial örneğini `trp examples/hesaplama.tpg` komutuyla çalıştırabilirsiniz.
+Örneklerin tümü `examples/` dizinindedir; örneğin `trp examples/hesaplama.tpg`.
 
 ## Sözdizimi
 

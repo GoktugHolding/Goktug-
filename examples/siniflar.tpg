@@ -1,0 +1,14 @@
+sinif Insan:
+    def __init__(kendim, isim):
+        kendim.isim = isim
+
+    fonksiyon selamla(kendim):
+        yazdir("Merhaba", kendim.isim)
+
+sinif Ogrenci(Insan):
+    fonksiyon tanit(kendim):
+        yazdir("Ben", kendim.isim, "öğrenciyim.")
+
+ogrenci = Ogrenci("Ada")
+ogrenci.selamla()
+ogrenci.tanit()

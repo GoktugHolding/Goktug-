@@ -1,0 +1,2 @@
+isim = "Dünya"
+yazdir("Merhaba", isim)

@@ -1,0 +1,6 @@
+iceaktar matematik
+iceaktar json
+
+sonuc = matematik.karekok(81)
+veri = {"sonuc": sonuc, "basarili": Dogru}
+yazdir(json.dumps(veri, ensure_ascii=False))

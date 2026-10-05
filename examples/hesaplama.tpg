@@ -1,0 +1,7 @@
+fonksiyon faktoriyel(sayi):
+    eger sayi <= 1:
+        dondur 1
+    dondur sayi * faktoriyel(sayi - 1)
+
+icin deger icinde aralik(1, 6):
+    yazdir(deger, "! =", faktoriyel(deger))
