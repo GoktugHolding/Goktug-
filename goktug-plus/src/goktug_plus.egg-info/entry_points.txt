@@ -1,3 +1,0 @@
-[console_scripts]
-tpg = goktug.package_manager:main
-trp = goktug.cli:main

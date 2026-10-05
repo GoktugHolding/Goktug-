@@ -1,9 +1,0 @@
-ile ac("ornek.txt", "w", encoding="utf-8") olarak dosya:
-    dosya.write("Goktug+ ile yazıldı.\n")
-
-dene:
-    sonuc = 10 / 0
-hata_yakala ZeroDivisionError olarak hata:
-    yazdir("Sıfıra bölme önlendi:", hata)
-sonunda:
-    yazdir("İşlem tamamlandı.")
