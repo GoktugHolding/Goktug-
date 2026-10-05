@@ -1,0 +1,8 @@
+iceaktar asyncio
+
+asenkron fonksiyon ana():
+    yazdir("Asenkron görev başladı")
+    bekle asyncio.sleep(0)
+    yazdir("Asenkron görev bitti")
+
+asyncio.run(ana())

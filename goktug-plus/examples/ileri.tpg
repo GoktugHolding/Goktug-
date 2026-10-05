@@ -1,0 +1,18 @@
+fonksiyon ikiyle_carp(fonksiyon_degeri):
+    def sarmalayıcı(*argumanlar, **secenekler):
+        dondur fonksiyon_degeri(*argumanlar, **secenekler) * 2
+    dondur sarmalayıcı
+
+@ikiyle_carp
+fonksiyon kare(sayi: int) -> int:
+    dondur sayi ** 2
+
+liste_degerleri = [kare(n) icin n icinde aralik(5)]
+yazdir(liste_degerleri)
+
+fonksiyon sayilar():
+    uret 1
+    uret 2
+
+icin n icinde sayilar():
+    yazdir(n)
